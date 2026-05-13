@@ -1,11 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import {
-  filterByCategory,
-  filterByPrice,
-  resetFilters,
-} from "../../features/products/productsSlice";
-
 import { addToCart } from "../../features/cart/cartSlice";
 
 import FilterButtons from "./components/FilterButtons/FilterButtons";
