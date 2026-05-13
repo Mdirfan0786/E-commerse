@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
 
 import styles from "./Navbar.module.css";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className={styles.navbar}>
       <div className={styles.wrapper}>
@@ -12,20 +15,36 @@ function Navbar() {
           <Link to="/">ShopSphere</Link>
         </div>
 
-        {/* Navigation Links */}
-        <nav className={styles.navLinks}>
-          <Link to="/">Home</Link>
+        {/* Desktop Navigation */}
+        <nav className={`${styles.navLinks} ${isOpen ? styles.active : ""}`}>
+          <Link to="/" onClick={() => setIsOpen(false)}>
+            Home
+          </Link>
 
-          <Link to="/">Products</Link>
+          <Link to="/" onClick={() => setIsOpen(false)}>
+            Products
+          </Link>
 
-          <Link to="/">Categories</Link>
+          <Link to="/" onClick={() => setIsOpen(false)}>
+            Categories
+          </Link>
 
-          <Link to="/">Wishlist</Link>
+          <Link to="/" onClick={() => setIsOpen(false)}>
+            Wishlist
+          </Link>
         </nav>
 
-        {/* Cart Button */}
+        {/* Right Actions */}
         <div className={styles.actions}>
-          <button className={styles.cartBtn}>Cart</button>
+          <button className={styles.cartBtn}>
+            <FiShoppingCart size={18} />
+            Cart
+          </button>
+
+          {/* Hamburger Button */}
+          <button className={styles.menuBtn} onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          </button>
         </div>
       </div>
     </header>

@@ -23,11 +23,8 @@ function Footer() {
           <h4>Quick Links</h4>
 
           <Link to="/">Home</Link>
-
           <Link to="/">Products</Link>
-
           <Link to="/">Categories</Link>
-
           <Link to="/">Contact</Link>
         </div>
 
