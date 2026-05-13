@@ -19,7 +19,7 @@ function Hero() {
         </p>
 
         <div className={styles.heroActions}>
-          <Link to="/" className={styles.shopBtn}>
+          <Link to="/products" className={styles.shopBtn}>
             Shop Now
           </Link>
 

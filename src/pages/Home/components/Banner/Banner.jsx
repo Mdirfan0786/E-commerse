@@ -13,7 +13,7 @@ function Banner() {
 
         <p>Grab amazing discounts on electronics, fashion, and furniture.</p>
 
-        <Link to="/" className={styles.bannerBtn}>
+        <Link to="/products" className={styles.bannerBtn}>
           Start Shopping
         </Link>
       </div>
