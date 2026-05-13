@@ -10,6 +10,7 @@ const ProductDetail = React.lazy(
   () => import("./pages/profuctDetails/ProductDetail"),
 );
 
+const Cart = React.lazy(() => import("./pages/cart/Cart"));
 const Checkout = React.lazy(() => import("./pages/checkout/Checkout"));
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Catalog />} />
           <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Checkout />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </Suspense>
 
