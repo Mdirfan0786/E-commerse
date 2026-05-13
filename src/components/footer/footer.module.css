@@ -1,0 +1,107 @@
+/* footer.module.css */
+
+.footer {
+  background: #111827;
+  color: white;
+  margin-top: 60px;
+}
+
+/* Main wrapper */
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+
+  gap: 40px;
+
+  padding: 60px 24px;
+}
+
+/* Brand section */
+
+.brandSection h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.brandSection p {
+  color: #d1d5db;
+  line-height: 1.7;
+  max-width: 380px;
+  font-size: 15px;
+}
+
+/* Links */
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.links a {
+  text-decoration: none;
+  color: #d1d5db;
+  transition: 0.3s;
+  width: fit-content;
+}
+
+.links a:hover {
+  color: white;
+  transform: translateX(4px);
+}
+
+/* Bottom footer */
+
+.bottom {
+  border-top: 1px solid #374151;
+
+  padding: 20px;
+
+  text-align: center;
+
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 40px 20px;
+  }
+
+  .brandSection h2 {
+    font-size: 1.7rem;
+  }
+
+  .brandSection p {
+    max-width: 100%;
+  }
+
+  .bottom {
+    font-size: 13px;
+    padding: 16px;
+  }
+}

@@ -3,24 +3,146 @@
     "id": 1,
     "name": "iPhone 15",
     "price": 999,
-    "category": "Electronics"
+    "category": "Electronics",
+    "description": "Latest Apple smartphone with powerful performance and advanced camera system.",
+    "image": "https://images.unsplash.com/photo-1695048133142-1a20484d2569",
+    "rating": 4.8,
+    "reviews": 245,
+    "stock": 12,
+    "brand": "Apple"
   },
   {
     "id": 2,
     "name": "Samsung TV",
     "price": 500,
-    "category": "Electronics"
+    "category": "Electronics",
+    "description": "Smart 4K Ultra HD television with vibrant colors and immersive sound.",
+    "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6",
+    "rating": 4.5,
+    "reviews": 180,
+    "stock": 8,
+    "brand": "Samsung"
   },
   {
     "id": 3,
-    "name": "Nike Shoes",
-    "price": 120,
-    "category": "Fashion"
+    "name": "Sony Headphones",
+    "price": 199,
+    "category": "Electronics",
+    "description": "Wireless noise-cancelling headphones with premium sound quality.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+    "rating": 4.7,
+    "reviews": 310,
+    "stock": 15,
+    "brand": "Sony"
   },
   {
     "id": 4,
+    "name": "MacBook Air",
+    "price": 1299,
+    "category": "Electronics",
+    "description": "Lightweight laptop with Apple M-series chip and long battery life.",
+    "image": "https://images.unsplash.com/photo-1420406676079-b8491f2d07c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1hY2Jvb2t8ZW58MHx8MHx8fDA%3D",
+    "rating": 4.9,
+    "reviews": 410,
+    "stock": 6,
+    "brand": "Apple"
+  },
+
+  {
+    "id": 5,
+    "name": "Nike Shoes",
+    "price": 50,
+    "category": "Fashion",
+    "description": "Comfortable and stylish running shoes designed for everyday performance.",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    "rating": 4.7,
+    "reviews": 320,
+    "stock": 20,
+    "brand": "Nike"
+  },
+  {
+    "id": 6,
     "name": "T-Shirt",
     "price": 40,
-    "category": "Fashion"
+    "category": "Fashion",
+    "description": "Premium cotton t-shirt with soft fabric and modern fit.",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    "rating": 4.3,
+    "reviews": 95,
+    "stock": 30,
+    "brand": "H&M"
+  },
+  {
+    "id": 7,
+    "name": "Denim Jacket",
+    "price": 85,
+    "category": "Fashion",
+    "description": "Classic blue denim jacket with comfortable regular fit.",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
+    "rating": 4.6,
+    "reviews": 150,
+    "stock": 18,
+    "brand": "Levi's"
+  },
+  {
+    "id": 8,
+    "name": "Leather Handbag",
+    "price": 150,
+    "category": "Fashion",
+    "description": "Elegant leather handbag suitable for casual and formal occasions.",
+    "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3",
+    "rating": 4.5,
+    "reviews": 120,
+    "stock": 10,
+    "brand": "Zara"
+  },
+
+  {
+    "id": 9,
+    "name": "Wooden Dining Table",
+    "price": 799,
+    "category": "Furniture",
+    "description": "Modern wooden dining table perfect for family gatherings.",
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+    "rating": 4.6,
+    "reviews": 88,
+    "stock": 5,
+    "brand": "IKEA"
+  },
+  {
+    "id": 10,
+    "name": "Office Chair",
+    "price": 99,
+    "category": "Furniture",
+    "description": "Ergonomic office chair with adjustable height and lumbar support.",
+    "image": "https://images.unsplash.com/photo-1505843513577-22bb7d21e455",
+    "rating": 4.7,
+    "reviews": 142,
+    "stock": 14,
+    "brand": "Herman Miller"
+  },
+  {
+    "id": 11,
+    "name": "Sofa Set",
+    "price": 999,
+    "category": "Furniture",
+    "description": "Luxury sofa set with premium fabric and modern design.",
+    "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+    "rating": 4.8,
+    "reviews": 67,
+    "stock": 4,
+    "brand": "Urban Ladder"
+  },
+  {
+    "id": 12,
+    "name": "Bookshelf",
+    "price": 180,
+    "category": "Furniture",
+    "description": "Spacious wooden bookshelf for organizing books and decor.",
+    "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
+    "rating": 4.4,
+    "reviews": 55,
+    "stock": 11,
+    "brand": "Home Centre"
   }
 ]

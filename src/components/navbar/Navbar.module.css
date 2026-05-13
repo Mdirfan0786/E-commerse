@@ -1,0 +1,146 @@
+/* Navbar.module.css */
+
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Main container */
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+}
+
+/* Logo */
+
+.logo a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: 1px;
+}
+
+/* Nav links */
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 600;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navLinks a:hover {
+  color: #111827;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #111827;
+  transition: 0.3s;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+/* Right section */
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Cart button */
+
+.cartBtn {
+  border: none;
+  background: #111827;
+  color: white;
+
+  padding: 10px 18px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cartBtn:hover {
+  background: #000;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+
+  .navLinks {
+    gap: 18px;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+
+    height: auto;
+
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
