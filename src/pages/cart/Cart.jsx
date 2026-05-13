@@ -1,8 +1,11 @@
 import React, { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 
 import { removeFromCart, updateQuantity } from "../../features/cart/cartSlice";
+
+import CartItem from "./components/CartItem/CartItem";
+import CartSummary from "./components/cartSummary/CartSummary";
+import EmptyCart from "./components/EmptyCart/EmptyCart";
 
 import styles from "./Cart.module.css";
 
@@ -48,15 +51,7 @@ function Cart() {
 
   // Empty cart state
   if (cartItems.length === 0) {
-    return (
-      <div className={styles.emptyCart}>
-        <h2>Your cart is empty 🛒</h2>
-
-        <Link to="/" className={styles.shopBtn}>
-          Continue Shopping
-        </Link>
-      </div>
-    );
+    return <EmptyCart />;
   }
 
   return (
@@ -67,60 +62,18 @@ function Cart() {
         {/* Cart Items */}
         <div className={styles.cartItems}>
           {cartItems.map((item) => (
-            <div key={item.id} className={styles.card}>
-              {/* Product Image */}
-              <img src={item.image} alt={item.name} className={styles.image} />
-
-              {/* Product Info */}
-              <div className={styles.info}>
-                <p className={styles.brand}>{item.brand}</p>
-
-                <h3>{item.name}</h3>
-
-                <p className={styles.price}>${item.price}</p>
-              </div>
-
-              {/* Quantity Controls */}
-              <div className={styles.quantityBox}>
-                <button onClick={() => decreaseQuantity(item)}>-</button>
-
-                <span>{item.quantity}</span>
-
-                <button onClick={() => increaseQuantity(item)}>+</button>
-              </div>
-
-              {/* Remove Button */}
-              <button
-                className={styles.removeBtn}
-                onClick={() => dispatch(removeFromCart(item.id))}
-              >
-                Remove
-              </button>
-            </div>
+            <CartItem
+              key={item.id}
+              item={item}
+              increaseQuantity={increaseQuantity}
+              decreaseQuantity={decreaseQuantity}
+              removeFromCart={() => dispatch(removeFromCart(item.id))}
+            />
           ))}
         </div>
 
         {/* Order Summary */}
-        <div className={styles.summary}>
-          <h2>Order Summary</h2>
-
-          <div className={styles.summaryRow}>
-            <p>Items</p>
-
-            <p>{cartItems.length}</p>
-          </div>
-
-          <div className={styles.summaryRow}>
-            <p>Total</p>
-
-            <h3>${totalPrice}</h3>
-          </div>
-
-          {/* Checkout Button */}
-          <Link to="/checkout" className={styles.checkoutBtn}>
-            Proceed To Checkout
-          </Link>
-        </div>
+        <CartSummary totalPrice={totalPrice} totalItems={cartItems.length} />
       </div>
     </div>
   );

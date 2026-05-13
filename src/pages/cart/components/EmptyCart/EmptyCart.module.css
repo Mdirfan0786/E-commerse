@@ -1,0 +1,38 @@
+.emptyCart {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  background: #f4f7fb;
+}
+
+.emptyCart h2 {
+  color: #111827;
+}
+
+/* Continue Shopping Button */
+
+.shopBtn {
+  text-decoration: none;
+
+  background: #111827;
+  color: white;
+
+  padding: 14px 22px;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.shopBtn:hover {
+  background: #000;
+}

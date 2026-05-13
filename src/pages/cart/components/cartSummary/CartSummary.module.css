@@ -1,0 +1,57 @@
+.summary {
+  background: white;
+
+  padding: 24px;
+
+  border-radius: 18px;
+
+  height: fit-content;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.summary h2 {
+  margin-bottom: 24px;
+
+  color: #111827;
+}
+
+.summaryRow {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.summaryRow p,
+.summaryRow h3 {
+  color: #111827;
+}
+
+/* Checkout Button */
+
+.checkoutBtn {
+  display: block;
+
+  width: 100%;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  background: #111827;
+  color: white;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.checkoutBtn:hover {
+  background: #000;
+}

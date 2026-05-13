@@ -1,0 +1,90 @@
+/* CheckoutForm.module.css */
+
+.form {
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.form h2 {
+  margin-bottom: 24px;
+
+  color: #111827;
+}
+
+/* Input Group */
+
+.inputGroup {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.inputGroup label {
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.inputGroup input,
+.inputGroup textarea,
+.inputGroup select {
+  padding: 14px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+.inputGroup textarea {
+  resize: none;
+
+  min-height: 120px;
+}
+
+/* Button */
+
+.orderBtn {
+  width: 100%;
+
+  border: none;
+
+  background: #111827;
+  color: white;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.orderBtn:hover {
+  background: #000;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .form {
+    padding: 20px;
+  }
+}
