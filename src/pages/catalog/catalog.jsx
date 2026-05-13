@@ -7,6 +7,8 @@ import {
   resetFilters,
 } from "../../features/products/productsSlice";
 
+import { addToCart } from "../../features/cart/cartSlice";
+
 import styles from "./catalog.module.css";
 
 function Catalog() {
@@ -79,7 +81,16 @@ function Catalog() {
                 </Link>
 
                 {/* Add to cart button */}
-                <button className={styles.cartBtn}>Add to Cart</button>
+                <button
+                  className={styles.cartBtn}
+                  onClick={() => {
+                    dispatch(addToCart(p));
+
+                    alert("Product added to cart successfully!");
+                  }}
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>

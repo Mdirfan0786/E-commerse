@@ -15,7 +15,7 @@ function Navbar() {
           <Link to="/">ShopSphere</Link>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Navigation */}
         <nav className={`${styles.navLinks} ${isOpen ? styles.active : ""}`}>
           <Link to="/" onClick={() => setIsOpen(false)}>
             Home
@@ -36,10 +36,15 @@ function Navbar() {
 
         {/* Right Actions */}
         <div className={styles.actions}>
-          <button className={styles.cartBtn}>
+          {/* Cart Navigation */}
+          <Link
+            to="/cart"
+            className={styles.cartBtn}
+            onClick={() => setIsOpen(false)}
+          >
             <FiShoppingCart size={18} />
             Cart
-          </button>
+          </Link>
 
           {/* Hamburger Button */}
           <button className={styles.menuBtn} onClick={() => setIsOpen(!isOpen)}>

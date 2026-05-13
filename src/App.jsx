@@ -10,6 +10,8 @@ const ProductDetail = React.lazy(
   () => import("./pages/profuctDetails/ProductDetail"),
 );
 
+const Checkout = React.lazy(() => import("./pages/checkout/Checkout"));
+
 function App() {
   return (
     <>
@@ -18,8 +20,8 @@ function App() {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Catalog />} />
-
           <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/cart" element={<Checkout />} />
         </Routes>
       </Suspense>
 
