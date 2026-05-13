@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import styles from "./ProductDetails.module.css";
@@ -14,13 +14,45 @@ function ProductDetail() {
   // Find matching product
   const product = products.find((item) => item.id === Number(id));
 
+  // Save recently viewed products
+  useEffect(() => {
+    if (!product) return;
+
+    // Get existing viewed products
+    const viewedProducts =
+      JSON.parse(localStorage.getItem("recentlyViewed")) || [];
+
+    // Remove duplicate product id
+    const updatedViewed = viewedProducts.filter(
+      (itemId) => itemId !== product.id,
+    );
+
+    // Add latest viewed product at beginning
+    updatedViewed.unshift(product.id);
+
+    // Keep only last 5 viewed products
+    const lastFiveProducts = updatedViewed.slice(0, 5);
+
+    // Save to localStorage
+    localStorage.setItem("recentlyViewed", JSON.stringify(lastFiveProducts));
+  }, [product]);
+
   // Show message if product not found
   if (!product) {
     return <h2>Product Not Found</h2>;
   }
 
+  // Get recently viewed ids
+  const viewedIds = JSON.parse(localStorage.getItem("recentlyViewed")) || [];
+
+  // Get recently viewed products
+  const recentProducts = products.filter(
+    (p) => viewedIds.includes(p.id) && p.id !== product.id,
+  );
+
   return (
     <div className={styles.container}>
+      {/* Product Details Card */}
       <div className={styles.card}>
         {/* Product image */}
         <div className={styles.imageContainer}>
@@ -61,6 +93,33 @@ function ProductDetail() {
           </div>
         </div>
       </div>
+
+      {/* Recently Viewed Products */}
+      {recentProducts.length > 0 && (
+        <div className={styles.recentSection}>
+          <h2 className={styles.recentHeading}>Recently Viewed</h2>
+
+          <div className={styles.recentGrid}>
+            {recentProducts.map((item) => (
+              <Link
+                to={`/product/${item.id}`}
+                key={item.id}
+                className={styles.recentCard}
+              >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className={styles.recentImage}
+                />
+
+                <h4>{item.name}</h4>
+
+                <p>${item.price}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
