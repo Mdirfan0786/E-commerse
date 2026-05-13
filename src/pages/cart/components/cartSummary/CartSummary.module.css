@@ -8,6 +8,8 @@
   height: fit-content;
 
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
 }
 
 .summary h2 {
@@ -22,17 +24,24 @@
   justify-content: space-between;
 
   margin-bottom: 20px;
+
+  gap: 12px;
 }
 
 .summaryRow p,
 .summaryRow h3 {
   color: #111827;
+
+  word-break: break-word;
 }
 
 /* Checkout Button */
 
 .checkoutBtn {
-  display: block;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 
   width: 100%;
 
@@ -41,15 +50,18 @@
   text-decoration: none;
 
   background: #111827;
+
   color: white;
 
-  padding: 14px;
+  padding: 14px 18px;
 
   border-radius: 10px;
 
   font-weight: 600;
 
   transition: 0.3s;
+
+  box-sizing: border-box;
 }
 
 .checkoutBtn:hover {
