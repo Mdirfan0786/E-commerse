@@ -1,0 +1,57 @@
+.features {
+  max-width: 1200px;
+
+  margin: -70px auto 0;
+
+  padding: 0 20px;
+
+  position: relative;
+
+  z-index: 10;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+.featureCard {
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 22px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.featureCard:hover {
+  transform: translateY(-6px);
+}
+
+.featureCard svg {
+  color: #2563eb;
+
+  margin-bottom: 18px;
+}
+
+.featureCard h3 {
+  margin-bottom: 12px;
+}
+
+.featureCard p {
+  color: #6b7280;
+
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,67 @@
+.banner {
+  max-width: 1200px;
+
+  margin: 90px auto;
+
+  padding: 0 20px;
+}
+
+.bannerContent {
+  background: linear-gradient(135deg, #111827, #1e3a8a);
+
+  border-radius: 28px;
+
+  padding: 70px 50px;
+
+  text-align: center;
+
+  color: white;
+}
+
+.offer {
+  color: #93c5fd;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 16px;
+}
+
+.bannerContent h2 {
+  font-size: 3rem;
+
+  margin-bottom: 18px;
+}
+
+.bannerContent p {
+  color: #d1d5db;
+
+  margin-bottom: 30px;
+
+  line-height: 1.7;
+}
+
+.bannerBtn {
+  text-decoration: none;
+
+  background: white;
+
+  color: #111827;
+
+  padding: 14px 26px;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .bannerContent {
+    padding: 50px 24px;
+  }
+
+  .bannerContent h2 {
+    font-size: 2rem;
+  }
+}

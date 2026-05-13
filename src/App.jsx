@@ -13,6 +13,7 @@ const ProductDetail = React.lazy(
 const Cart = React.lazy(() => import("./pages/cart/Cart"));
 const Checkout = React.lazy(() => import("./pages/checkout/Checkout"));
 const WishList = React.lazy(() => import("./pages/wishlist/Wishlist"));
+const Home = React.lazy(() => import("./pages/Home/Home"));
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
 
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/" element={<Catalog />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Catalog />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />

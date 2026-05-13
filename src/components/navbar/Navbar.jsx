@@ -21,7 +21,7 @@ function Navbar() {
             Home
           </Link>
 
-          <Link to="/" onClick={() => setIsOpen(false)}>
+          <Link to="/products" onClick={() => setIsOpen(false)}>
             Products
           </Link>
 
