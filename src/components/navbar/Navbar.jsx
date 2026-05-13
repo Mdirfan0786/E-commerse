@@ -29,7 +29,7 @@ function Navbar() {
             Categories
           </Link>
 
-          <Link to="/" onClick={() => setIsOpen(false)}>
+          <Link to="/wishlist" onClick={() => setIsOpen(false)}>
             Wishlist
           </Link>
         </nav>

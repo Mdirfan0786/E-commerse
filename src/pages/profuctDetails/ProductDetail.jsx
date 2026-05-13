@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import styles from "./ProductDetails.module.css";
+import { addToWishlist } from "../../features/wishlist/wishlistSlice";
 
 function ProductDetail() {
   // Get product id from URL
   const { id } = useParams();
+
+  const dispatch = useDispatch();
 
   // Get all products from Redux store
   const products = useSelector((state) => state.products.all);
@@ -89,7 +92,16 @@ function ProductDetail() {
           <div className={styles.actions}>
             <button className={styles.cartBtn}>Add to Cart</button>
 
-            <button className={styles.wishlistBtn}>Wishlist</button>
+            <button
+              className={styles.wishlistBtn}
+              onClick={() => {
+                dispatch(addToWishlist(product));
+
+                alert("Added to wishlist successfully ❤️");
+              }}
+            >
+              Wishlist
+            </button>
           </div>
         </div>
       </div>
