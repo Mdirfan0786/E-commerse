@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
+import Loader from "./components/loader/Loader";
 
 const Catalog = React.lazy(() => import("./pages/catalog/catalog"));
 
@@ -14,7 +15,7 @@ function App() {
     <>
       <Navbar />
 
-      <Suspense fallback={<h2>Loading...</h2>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Catalog />} />
 
